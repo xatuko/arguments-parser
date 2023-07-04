@@ -37,7 +37,7 @@ int main(int argc, char ** argv)
 
     itmp = ap.getHex("--load_addr");
     if (itmp.has_value())
-        std::cout << "Load address: " << itmp.value() << std::endl;
+        std::cout << "Load address: " << std::hex << "0x" << itmp.value() << std::endl;
 
     btmp = ap.getBool("--debug");
     if (btmp.has_value())
