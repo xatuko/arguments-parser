@@ -18,6 +18,9 @@ bool ArgParser::init(int argc, char ** argv)
             m_args[tmp].value = "set";
         else if (i+1 < argc)
         {
+            if (m_args.find(argv[i+1]) != m_args.end())
+                return false;
+
             m_args[tmp].value = argv[i+1];
             i++;
         }
